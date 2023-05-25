@@ -1,0 +1,19 @@
+
+
+
+#Data Modification Statements:
+-insert new data:
+   Insert Into TABLE
+     Values (A1, A2,...)
+         
+   Insert Into Table
+      Select=statement
+
+-Deleting existing data:
+    Delete From TABLE
+    Where CONDITION
+
+- Updating existing data:
+    Update TABLE
+    Set Attr = Expression (here the atribute will be re asigned to  adquire the expresion value)
+    where CONDITION

@@ -17,3 +17,29 @@
     Update TABLE
     Set Attr = Expression (here the atribute will be re asigned to  adquire the expresion value)
     where CONDITION
+
+For all cases where the same reviewer rated the same movie twice and gave it a higher rating the second time, return the reviewer's name and the title of the movie.
+
+select r.name, m.title
+from Reviewer as r, Movie as m,
+      (select r1.rID, r1.mID
+      from Rating r1 , Rating r2
+      where r1.rID = r2.rID and r1.mID = r2.mID
+            and r1.stars > r2.stars
+            and r1.ratingDate > r2.ratingDate) as a
+where r.rID = a.rID and m.mID = a.mID
+
+
+Q9
+0/1 points (graded)
+Find the difference between the average rating of movies released before 1980 and the average rating of movies released after 1980. (Make sure to calculate the average rating for each movie, then the average of those averages for movies before 1980 and movies after. Don't just calculate the overall average rating before and after 1980.)
+
+SELECT
+    COALESCE(AVG(CASE WHEN year < 1980 THEN avg1 END), 0)
+       - COALESCE(AVG(CASE WHEN year >= 1980 THEN avg1 END), 0) rating_diff
+FROM (
+    SELECT m.mID, m.year, AVG(stars * 1.0) avg1
+    FROM Movie m
+    INNER JOIN Rating r ON m.mID = r.mID
+    GROUP BY m.mID, m.year
+) x

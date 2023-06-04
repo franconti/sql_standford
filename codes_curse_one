@@ -32,6 +32,23 @@ where r.rID = a.rID and m.mID = a.mID
 
 Q9
 0/1 points (graded)
+
+
+#######################
+Databases: Advanced Topics in SQL
+
+video 1:
+indexes:
+Indexes are used to retrieve data from the database more quickly than otherwise. The users cannot see the indexes, they are just used to speed up searches/queries.
+
+
+
+
+
+
+
+
+
 Find the difference between the average rating of movies released before 1980 and the average rating of movies released after 1980. (Make sure to calculate the average rating for each movie, then the average of those averages for movies before 1980 and movies after. Don't just calculate the overall average rating before and after 1980.)
 
 SELECT

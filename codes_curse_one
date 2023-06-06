@@ -38,9 +38,11 @@ Q9
 Databases: Advanced Topics in SQL
 
 video 1:
-indexes:
+-indexes:
 Indexes are used to retrieve data from the database more quickly than otherwise. The users cannot see the indexes, they are just used to speed up searches/queries.
+- buscar aca los dos tipos de indexes que hay, como usarlos y una imagen de cada uno
 
+-transactions
 
 
 

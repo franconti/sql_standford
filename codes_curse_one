@@ -43,7 +43,8 @@ Indexes are used to retrieve data from the database more quickly than otherwise.
 - buscar aca los dos tipos de indexes que hay, como usarlos y una imagen de cada uno
 
 -transactions
--repeatable read
+-repeatable read: allows you to read the same data repeatedly and it makes sure that any transaction cannot update this data until you complete your reading.
+   carefull it creates phantom data when another user is doing transactiosn too. 
 
 
 

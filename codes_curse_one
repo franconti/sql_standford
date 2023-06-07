@@ -43,8 +43,7 @@ Indexes are used to retrieve data from the database more quickly than otherwise.
 - buscar aca los dos tipos de indexes que hay, como usarlos y una imagen de cada uno
 
 -transactions
-
-
+-repeatable read
 
 
 
